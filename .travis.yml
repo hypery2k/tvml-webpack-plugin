@@ -2,7 +2,6 @@ os: osx
 sudo: false
 language: cpp
 env:
-  - NPM_VERSION=3
   - NODE_VERSION="4"
   - NODE_VERSION="5"
 script:
@@ -11,10 +10,7 @@ before_install:
   - wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
   - source ~/.nvm/nvm.sh && nvm install $NODE_VERSION
   - PATH="`npm bin`:`npm bin -g`:$PATH"
-  - npm install -g npm@$NPM_VERSION
   - npm install
   # Output useful info for debugging
   - node --version
   - npm --version
-  # Run tests
-  - npm test
