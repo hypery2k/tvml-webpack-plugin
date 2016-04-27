@@ -1,0 +1,5 @@
+language: objective-c
+script:
+  - npm test
+before_install:
+  - npm install

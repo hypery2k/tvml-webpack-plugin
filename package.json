@@ -1,0 +1,47 @@
+{
+  "name": "tvml-webpack-plugin",
+  "version": "0.1.0",
+  "description": "TVML WebPack Plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypery2k/tvml-webpack-plugin.git"
+  },
+  "keywords": [
+    "tvml",
+    "tvos",
+    "Apple",
+    "webpack"
+  ],
+  "author": "Martin Reinhardt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hypery2k/tvml-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/hypery2k/tvml-webpack-plugin#readme",
+  "dependencies": {
+    "resolve": "1.1.7",
+    "tvml-kit-livereload": "0.1.1"
+  },
+  "peerDependencies": {
+    "webpack": ">=0.9.2",
+    "imports-loader": "0.6.5"
+  },
+  "devDependencies": {
+    "coveralls": "2.11.9",
+    "istanbul": "0.4.3",
+    "istanbul-coveralls": "1.0.3",
+    "jscoverage": "0.6.0",
+    "jshint": "2.9.2",
+    "nodeunit": "0.9.1"
+  },
+  "main": "index.js",
+  "engine-strict": true,
+  "engines": {
+    "node": ">=0.10.22"
+  },
+  "scripts": {
+    "test": "nodeunit --reporter=minimal test/*.js",
+    "pretest": "jshint -c .jshintrc --filename *.js && jshint -c .jshintrc --filename lib/*.js && jshint -c .jshintrc --filename test/*.js",
+    "coverage": "istanbul -- cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
+  }
+}
