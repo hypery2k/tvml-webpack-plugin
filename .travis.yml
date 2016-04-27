@@ -1,5 +1,21 @@
-language: objective-c
+os: osx
+sudo: false
+language: cpp
+env:
+  matrix:
+    - NODE_VERSION="4"
+    - NODE_VERSION="5"
+env:
+  - NPM_VERSION=3
 script:
   - npm test
 before_install:
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $NODE_VERSION
+  - PATH="`npm bin`:`npm bin -g`:$PATH"
+  - npm install -g npm@$NPM_VERSION
   - npm install
+  # Output useful info for debugging
+  - node --version
+  - npm --version
+  # Run tests
+  - npm test
