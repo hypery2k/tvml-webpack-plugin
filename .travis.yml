@@ -2,11 +2,9 @@ os: osx
 sudo: false
 language: cpp
 env:
-  matrix:
-    - NODE_VERSION="4"
-    - NODE_VERSION="5"
-env:
   - NPM_VERSION=3
+  - NODE_VERSION="4"
+  - NODE_VERSION="5"
 script:
   - npm test
 before_install:
