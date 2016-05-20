@@ -22,15 +22,31 @@ TvmlLiveReloadPlugin.prototype.apply = function (compiler) {
         }
     });
     compiler.plugin("normal-module-factory", function (nmf) {
+
+        var livereloadPath = path.join(__dirname, "/lib/livereload-loader.js") + "?" + port;
         // add only in devtool
         if (devtool) {
             nmf.plugin("after-resolve", function (data, callback) {
                 if ((data.rawRequest).indexOf(appFile) !== -1) {
                     // adding livereload loader
-                    data.loaders.push(path.join(__dirname, "/lib/livereload-loader.js") + "?" + port);
+                    data.loaders.push(livereloadPath);
                     // socket.io-client requires the window object, and navigator.userAgent to be present.
                     // use webpack to shim these into socket.io
                     data.loaders.push(importsLoader + "?window=>{},navigator=>{userAgent: 'tvos'}");
+                    callback(null, data);
+                } else {
+
+                    callback(null, data);
+                }
+            });
+        } else {
+            nmf.plugin("after-resolve", function (data, callback) {
+                if ((data.rawRequest).indexOf(appFile) !== -1) {
+                    for (var i = data.loaders.length; i--;) {
+                        if (data.loaders[i] === livereloadPath) {
+                            data.loaders.splice(i, 1);
+                        }
+                    }
                     callback(null, data);
                 } else {
 
