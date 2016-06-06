@@ -1,6 +1,6 @@
 {
   "name": "tvml-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "TVML WebPack Plugin",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   "homepage": "https://github.com/hypery2k/tvml-webpack-plugin#readme",
   "dependencies": {
     "resolve": "1.1.7",
-    "tvml-kit-livereload": "0.1.1"
+    "tvml-kit-livereload": "0.2.0"
   },
   "peerDependencies": {
     "webpack": ">=0.9.2",
@@ -37,7 +37,7 @@
   "main": "index.js",
   "engine-strict": true,
   "engines": {
-    "node": ">=0.10.22"
+    "node": ">= 4.2.x"
   },
   "scripts": {
     "test": "nodeunit --reporter=minimal test/*.js",
