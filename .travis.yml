@@ -9,7 +9,7 @@ script:
   - npm test
 before_install:
   - wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-  - source ~/.nvm/nvm.sh && nvm install $NODE_VERSION
+  - source ~/.nvm/nvm.sh && nvm install $NODE_VERSION && nvm use $NODE_VERSION
   - PATH="`npm bin`:`npm bin -g`:$PATH"
   - npm install
   # Output useful info for debugging
