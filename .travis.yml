@@ -1,9 +1,10 @@
 os: osx
 sudo: false
-language: cpp
+language: objective-c
 env:
   - NODE_VERSION="4"
   - NODE_VERSION="5"
+  - NODE_VERSION="6"
 script:
   - npm test
 before_install:
