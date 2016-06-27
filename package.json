@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nodeunit --reporter=minimal test/*.js",
     "pretest": "eslint *.js && eslint lib/*.js && eslint test/*.js && nsp check",
-    "coverage": "istanbul -- cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
+    "coverage": "istanbul --cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,6 @@
     "istanbul": "0.4.3",
     "istanbul-coveralls": "1.0.3",
     "jscoverage": "0.6.0",
-    "jshint": "2.9.2",
     "nodeunit": "0.9.1",
     "nsp": "2.4.0"
   },
