@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/hypery2k/tvml-webpack-plugin#readme",
   "dependencies": {
-    "imports-loader": "^0.6.5",
+    "imports-loader": ">=0.6.5",
     "resolve": "1.1.7",
-    "tvml-kit-livereload": "next"
+    "tvml-kit-livereload": "0.3.0"
   },
   "peerDependencies": {
     "webpack": ">=0.9.2",
-    "imports-loader": "0.6.5"
+    "imports-loader": ">=0.6.5"
   },
   "devDependencies": {
     "coveralls": "2.11.9",
