@@ -28,7 +28,7 @@ node {
 
       stage('Test') {
         sh "npm run test"
-        junit 'reports/TEST-*.xml'
+        junit 'dist/test-reports/*.xml'
       }
 
       stage('Publish NPM snapshot') {
@@ -38,7 +38,7 @@ node {
       }
 
     } catch (e){
-      mail subject: 'Error on build', to: 'contact@martinreinhardt-online.de'
+      mail subject: "${env.JOB_NAME} (${env.BUILD_NUMBER}): Error on build", to: 'github@martinreinhardt-online.de', body: "Please go to ${env.BUILD_URL}."
       throw e
     }
   }

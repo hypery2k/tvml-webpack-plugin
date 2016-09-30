@@ -4,7 +4,7 @@
   "description": "TVML WebPack Plugin",
   "main": "index.js",
   "scripts": {
-    "test": "nodeunit --reporter=minimal test/*.js",
+    "test": "nodeunit --reporter=junit --output=dist/test-reports/ test/*.js",
     "pretest": "eslint *.js && eslint lib/*.js && eslint test/*.js",
     "coverage": "istanbul -- cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
   },
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/hypery2k/tvml-webpack-plugin#readme",
   "dependencies": {
+    "imports-loader": "^0.6.5",
     "resolve": "1.1.7",
     "tvml-kit-livereload": "next"
   },
@@ -40,7 +41,8 @@
     "jscoverage": "0.6.0",
     "jshint": "2.9.2",
     "nodeunit": "0.9.1",
-    "nsp": "2.4.0"
+    "nsp": "2.4.0",
+    "webpack": "1.13.2"
   },
   "engine-strict": true,
   "engines": {
