@@ -28,7 +28,7 @@ node {
 
       stage('Test') {
         sh "npm run test"
-        junit 'dist/test-reports/*.xml'
+        junit 'reports/TEST-*.xml'
       }
 
       stage('Publish NPM snapshot') {

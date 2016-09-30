@@ -1,13 +1,17 @@
 var loader = require('../lib/livereload-loader'),
-    path = require('path');
+  path = require('path'),
+  livereload = require('../index.js');
 
-exports.replace = function (test) {
+describe('api', function () {
+  'use strict';
+
+  it('should replace', function (done) {
     // given
 
     var dirname = path.resolve(__dirname, '..', 'node_modules', 'tvml-kit-livereload');
     var given = `App.onLaunch = function () {
     }`,
-        expected = `var liveReload = require('` + dirname + `/lib/livereload');
+      expected = `var liveReload = require('` + dirname + `/lib/livereload');
 
 App.onLaunch = function () {
   liveReload.connect('http://localhost:9000', App);
@@ -19,6 +23,8 @@ App.onLaunch = function () {
     // when
     var result = loader.apply(this, [given]);
     // then
-    test.ok(result.localeCompare(expected) === 0, 'Should replace source');
-    test.done();
-};
+    expect(result).toBe(expected);
+    done();
+  });
+
+});
