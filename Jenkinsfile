@@ -17,7 +17,7 @@ node {
     echo "PATH is $env.PATH"
 
     try {
-      stage 'Clean workspace' {
+      stage('Clean workspace') {
         deleteDir()
       }
 
