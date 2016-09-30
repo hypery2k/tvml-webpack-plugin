@@ -10,7 +10,6 @@ node {
     def workspace = env.WORKSPACE
     def buildUrl = env.BUILD_URL
 
-
     // PRINT ENVIRONMENT TO JOB
     echo "workspace directory is $workspace"
     echo "build URL is $buildUrl"
@@ -18,6 +17,10 @@ node {
     echo "PATH is $env.PATH"
 
     try {
+      stage 'Clean workspace' {
+        deleteDir()
+      }
+
       stage('Checkout') {
         checkout scm
       }
@@ -37,7 +40,7 @@ node {
         sh "npm version ${newVersion} --no-git-tag-version && npm publish --tag next"
       }
 
-    } catch (e){
+    } catch (e) {
       mail subject: "${env.JOB_NAME} (${env.BUILD_NUMBER}): Error on build", to: 'github@martinreinhardt-online.de', body: "Please go to ${env.BUILD_URL}."
       throw e
     }
