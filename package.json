@@ -4,7 +4,7 @@
   "description": "TVML WebPack Plugin",
   "main": "index.js",
   "scripts": {
-    "test": "nodeunit --reporter=junit --output=dist/test-reports/ test/*.js",
+    "test": "nodeunit --reporter=junit --output=dist/test-reports/",
     "pretest": "eslint *.js && eslint lib/*.js && eslint test/*.js",
     "coverage": "istanbul -- cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
   },
