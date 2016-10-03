@@ -4,7 +4,7 @@
   "description": "TVML WebPack Plugin",
   "main": "index.js",
   "scripts": {
-    "test": "nodeunit --reporter=minimal test/*.js",
+    "test": "jasmine-node test --junitreport",
     "pretest": "eslint *.js && eslint lib/*.js && eslint test/*.js && nsp check",
     "coverage": "istanbul --cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
   },
@@ -25,23 +25,24 @@
   },
   "homepage": "https://github.com/hypery2k/tvml-webpack-plugin#readme",
   "dependencies": {
+    "imports-loader": ">=0.6.5",
     "resolve": "1.1.7",
     "tvml-kit-livereload": "next"
   },
   "peerDependencies": {
     "webpack": ">=0.9.2",
-    "imports-loader": "0.6.5"
+    "imports-loader": ">=0.6.5"
   },
   "devDependencies": {
     "coveralls": "2.11.9",
     "eslint": "2.12.0",
-    "imports-loader": "0.6.5",
     "istanbul": "0.4.3",
     "istanbul-coveralls": "1.0.3",
+    "jasmine-node": "1.14.5",
     "jscoverage": "0.6.0",
     "nodeunit": "0.9.1",
     "nsp": "2.4.0",
-    "webpack": "0.9.2"
+    "webpack": "1.13.2"
   },
   "engine-strict": true,
   "engines": {

@@ -1249,10 +1249,10 @@
       "from": "node-uuid@~1.4.7",
       "resolved": "https://registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz"
     },
-    "nodeunit": {
-      "version": "0.9.1",
-      "from": "nodeunit@0.9.1",
-      "resolved": "http://registry.npmjs.org/nodeunit/-/nodeunit-0.9.1.tgz"
+    "jasmine-node": {
+      "version": "1.14.5",
+      "from": "jasmine-node@1.14.5",
+      "resolved": "http://registry.npmjs.org/jasmine-node/-/jasmine-node-1.14.5.tgz"
     },
     "nopt": {
       "version": "3.0.6",
