@@ -1,6 +1,6 @@
 {
   "name": "tvml-webpack-plugin",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "dependencies": {
     "abbrev": {
       "version": "1.0.9",
@@ -483,9 +483,9 @@
       "resolved": "http://registry.npmjs.org/ejs/-/ejs-1.0.0.tgz"
     },
     "engine.io": {
-      "version": "1.5.4",
-      "from": "engine.io@1.5.4",
-      "resolved": "http://registry.npmjs.org/engine.io/-/engine.io-1.5.4.tgz",
+      "version": "1.6.9",
+      "from": "engine.io@1.6.9",
+      "resolved": "http://registry.npmjs.org/engine.io/-/engine.io-1.6.9.tgz",
       "dependencies": {
         "debug": {
           "version": "1.0.3",
@@ -500,9 +500,9 @@
       }
     },
     "engine.io-client": {
-      "version": "1.5.4",
-      "from": "engine.io-client@1.5.4",
-      "resolved": "http://registry.npmjs.org/engine.io-client/-/engine.io-client-1.5.4.tgz",
+      "version": "1.6.9",
+      "from": "engine.io-client@1.6.9",
+      "resolved": "http://registry.npmjs.org/engine.io-client/-/engine.io-client-1.6.9.tgz",
       "dependencies": {
         "debug": {
           "version": "1.0.4",
@@ -1240,9 +1240,9 @@
       "resolved": "http://registry.npmjs.org/nan/-/nan-2.3.5.tgz"
     },
     "negotiator": {
-      "version": "0.5.3",
-      "from": "negotiator@0.5.3",
-      "resolved": "http://registry.npmjs.org/negotiator/-/negotiator-0.5.3.tgz"
+      "version": "0.6.1",
+      "from": "negotiator@0.6.1",
+      "resolved": "http://registry.npmjs.org/negotiator/-/negotiator-0.6.1.tgz"
     },
     "node-uuid": {
       "version": "1.4.7",
@@ -2666,9 +2666,9 @@
       "resolved": "http://registry.npmjs.org/tv4/-/tv4-1.2.7.tgz"
     },
     "tvml-kit-livereload": {
-      "version": "0.2.0",
-      "from": "tvml-kit-livereload@0.2.0",
-      "resolved": "http://registry.npmjs.org/tvml-kit-livereload/-/tvml-kit-livereload-0.2.0.tgz"
+      "version": "0.3.1",
+      "from": "tvml-kit-livereload@0.3.1",
+      "resolved": "http://registry.npmjs.org/tvml-kit-livereload/-/tvml-kit-livereload-0.3.1.tgz"
     },
     "tweetnacl": {
       "version": "0.13.3",
@@ -2781,9 +2781,9 @@
       "resolved": "http://registry.npmjs.org/write/-/write-0.2.1.tgz"
     },
     "ws": {
-      "version": "0.8.0",
-      "from": "ws@0.8.0",
-      "resolved": "http://registry.npmjs.org/ws/-/ws-0.8.0.tgz"
+      "version": "1.1.1",
+      "from": "ws@1.1.1",
+      "resolved": "http://registry.npmjs.org/ws/-/ws-1.1.1.tgz"
     },
     "xfs": {
       "version": "0.1.10",
