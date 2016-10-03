@@ -1,12 +1,12 @@
 {
   "name": "tvml-webpack-plugin",
-  "version": "0.2.2",
+  "version": "0.2.3-dev",
   "description": "TVML WebPack Plugin",
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node test --junitreport",
-    "pretest": "eslint *.js && eslint lib/*.js && eslint test/*.js",
-    "coverage": "istanbul -- cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
+    "pretest": "eslint *.js && eslint lib/*.js && eslint test/*.js && nsp check",
+    "coverage": "istanbul --cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
   },
   "repository": {
     "type": "git",
@@ -40,7 +40,7 @@
     "istanbul-coveralls": "1.0.3",
     "jasmine-node": "1.14.5",
     "jscoverage": "0.6.0",
-    "jshint": "2.9.2",
+    "nodeunit": "0.9.1",
     "nsp": "2.4.0",
     "webpack": "1.13.2"
   },
