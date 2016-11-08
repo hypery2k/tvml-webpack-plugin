@@ -34,15 +34,15 @@
     "imports-loader": ">=0.6.5"
   },
   "devDependencies": {
-    "coveralls": "2.11.9",
-    "eslint": "2.12.0",
-    "istanbul": "0.4.3",
+    "coveralls": "2.11.14",
+    "eslint": "3.9.1",
+    "istanbul": "0.4.5",
     "istanbul-coveralls": "1.0.3",
     "jasmine-node": "1.14.5",
     "jscoverage": "0.6.0",
-    "nodeunit": "0.9.1",
-    "nsp": "2.4.0",
-    "webpack": "1.13.2"
+    "nodeunit": "0.10.2",
+    "nsp": "2.6.2",
+    "webpack": "1.13.3"
   },
   "engine-strict": true,
   "engines": {
