@@ -34,7 +34,7 @@
     "imports-loader": ">=0.6.5"
   },
   "devDependencies": {
-    "coveralls": "2.11.14",
+    "coveralls": "2.11.15",
     "eslint": "3.9.1",
     "istanbul": "0.4.5",
     "istanbul-coveralls": "1.0.3",
