@@ -1,6 +1,6 @@
 {
   "name": "tvml-webpack-plugin",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "TVML WebPack Plugin",
   "main": "index.js",
   "scripts": {
