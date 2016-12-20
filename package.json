@@ -8,7 +8,7 @@
     "test": "jasmine-node test --junitreport",
     "pretest": "eslint *.js && eslint lib/*.js && eslint test/*.js && nsp check",
     "coverage": "istanbul --cover nodeunit test/tests.js && istanbul-coveralls --no-rm",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "changelog:add": "git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
     "release:pre": "npm run clean && npm run test",
     "release:post": "npm run changelog && npm run changelog:add",
