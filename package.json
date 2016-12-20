@@ -4,9 +4,17 @@
   "description": "TVML WebPack Plugin",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf reports",
     "test": "jasmine-node test --junitreport",
     "pretest": "eslint *.js && eslint lib/*.js && eslint test/*.js && nsp check",
-    "coverage": "istanbul --cover nodeunit test/tests.js && istanbul-coveralls --no-rm"
+    "coverage": "istanbul --cover nodeunit test/tests.js && istanbul-coveralls --no-rm",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog:add": "git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
+    "release:pre": "npm run clean && npm run test",
+    "release:post": "npm run changelog && npm run changelog:add",
+    "release:major": "npm run release:pre && npm version major && npm run release:post && git push origin && git push origin --tags && npm publish",
+    "release:minor": "npm run release:pre && npm version minor && npm run release:post && git push origin && git push origin --tags && npm publish",
+    "release:patch": "npm run release:pre && npm version patch && npm run release:post && git push origin && git push origin --tags && npm publish"
   },
   "repository": {
     "type": "git",
@@ -34,6 +42,7 @@
     "imports-loader": ">=0.6.5"
   },
   "devDependencies": {
+    "conventional-changelog-cli": "1.2.0",
     "coveralls": "2.11.14",
     "eslint": "3.12.1",
     "istanbul": "0.4.5",
