@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "conventional-changelog-cli": "1.2.0",
-    "coveralls": "2.11.14",
+    "coveralls": "2.11.16",
     "eslint": "3.12.1",
     "istanbul": "0.4.5",
     "istanbul-coveralls": "1.0.3",
