@@ -49,7 +49,7 @@
     "istanbul-coveralls": "1.0.3",
     "jasmine-node": "1.14.5",
     "jscoverage": "0.6.0",
-    "nodeunit": "0.10.2",
+    "nodeunit": "0.11.0",
     "nsp": "2.6.2",
     "webpack": "1.13.3"
   },
