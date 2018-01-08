@@ -1,5 +1,7 @@
 # TVML WebPack Plugin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hypery2k/tvml-webpack-plugin.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/hypery2k/tvml-webpack-plugin.svg?branch=master)](https://travis-ci.org/hypery2k/tvml-webpack-plugin) [![npm version](https://badge.fury.io/js/tvml-webpack-plugin.svg)](http://badge.fury.io/js/tvml-webpack-plugin) [![Dependency Status](https://david-dm.org/hypery2k/tvml-webpack-plugin.svg)](https://david-dm.org/hypery2k/tvml-webpack-plugin) [![devDependency Status](https://david-dm.org/hypery2k/tvml-webpack-plugin/dev-status.svg)](https://david-dm.org/hypery2k/tvml-webpack-plugin#info=devDependencies)
 
 > A WebPack plugin to support on developing TVML-based WebApps for tvOS
